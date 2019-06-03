@@ -1,5 +1,6 @@
+package models;
 
-public class Car extends Vehicle {
+public class Car extends Vehicle implements Cloneable{
 
 	private int noOfDoors;
 
@@ -15,5 +16,10 @@ public class Car extends Vehicle {
 
 	public void setNoOfDoors(int noOfDoors) {
 		this.noOfDoors = noOfDoors;
+	}
+	
+	@Override
+	public Vehicle clone() throws CloneNotSupportedException {
+		return (Car) super.clone();
 	}
 }
